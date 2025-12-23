@@ -1,0 +1,1 @@
+// embed.cpp - implementation placeholder

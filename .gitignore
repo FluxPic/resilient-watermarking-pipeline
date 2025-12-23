@@ -1,0 +1,86 @@
+# Build directories
+/build/
+/build-*/
+/out/
+/bin/
+/lib/
+/lib64/
+/dist/
+/install/
+
+# CMake generated files
+/CMakeFiles/
+/CMakeCache.txt
+/cmake_install.cmake
+/Makefile
+/install_manifest.txt
+/CTestTestfile.cmake
+
+# Visual Studio
+*.suo
+*.user
+*.userosscache
+*.vcxproj.user
+*.VC.db
+.vs/
+
+# VS Code workspace settings
+.vscode/
+
+# JetBrains
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Compiled object files and binaries
+*.o
+*.obj
+*.lo
+*.la
+*.al
+*.libs
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+*.exe
+*.out
+*.app
+
+# Coverage and profiling
+coverage/
+*.gcda
+*.gcno
+*.gcov
+*.prof
+
+# Logs and temporary files
+*.log
+*~
+*.swp
+*.tmp
+*.temp
+
+# CTest
+Testing/
+
+# CPack artifacts
+*.tar.gz
+*.zip
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Node
+node_modules/
+
+# Local OS or editor files
+*.bak
+*.backup
