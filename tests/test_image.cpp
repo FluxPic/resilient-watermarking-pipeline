@@ -4,8 +4,7 @@
 #include <cmath>
 #include "wm/image.h"
 #include "wm/types.h"
-#include "wm/errors.h"
-
+#include "wm/api.h"
 using namespace wm;
 
 // ----------------------------
@@ -30,19 +29,19 @@ void free_test_image(WM_ImageBuffer& img) {
 // ----------------------------
 void test_validate_image() {
     WM_ImageBuffer img{};
-    assert(validate_image(nullptr) == WM_ERR_INVALID_IMAGE);
+    assert(validate_image(nullptr) == WM_ERR_INVALID_ARGUMENT);
 
     img.width = 0;
     img.height = 0;
     img.channels = 3;
     img.data = nullptr;
-    assert(validate_image(&img) == WM_ERR_INVALID_IMAGE);
+    assert(validate_image(&img) == WM_ERR_INVALID_ARGUMENT);
 
     img.width = 2;
     img.height = 2;
     img.channels = 4;
     img.data = new uint8_t[2 * 2 * 4];
-    assert(validate_image(&img) == WM_ERR_UNSUPPORTED_FORMAT);
+    assert(validate_image(&img) == WM_ERR_INVALID_ARGUMENT);
     delete[] img.data;
 
     img = make_test_image(2, 2);
