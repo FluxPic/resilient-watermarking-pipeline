@@ -18,9 +18,6 @@ typedef struct {
 // --------------------
 // Watermark payload
 // --------------------
-typedef struct {
-    uint8_t bits[64];     // each bit is 0 or 1
-} WM_Payload;
 
 // --------------------
 // Watermark key
@@ -37,14 +34,7 @@ typedef struct {
     uint32_t redundancy;      // blocks per bit (default ~48)
 } WM_EmbedOptions;
 
-// --------------------
-// Extraction result
-// --------------------
-typedef struct {
-    uint8_t bits[64];
-    float confidence;         // 0.0 – 1.0
-    uint8_t success;          // 1 = success, 0 = fail
-} WM_ExtractResult;
+
 
 #ifdef __cplusplus
 }
