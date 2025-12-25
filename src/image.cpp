@@ -3,13 +3,13 @@
 
 namespace wm {
 
-WM_Error validate_image(const WM_ImageBuffer* img) {
+WM_Status validate_image(const WM_ImageBuffer* img) {
     if (!img || !img->data)
-        return WM_ERR_INVALID_IMAGE;
+        return WM_ERR_INVALID_ARGUMENT;
     if (img->channels != 3)
-        return WM_ERR_UNSUPPORTED_FORMAT;
+        return WM_ERR_INVALID_ARGUMENT;
     if (img->width == 0 || img->height == 0)
-        return WM_ERR_INVALID_IMAGE;
+        return WM_ERR_INVALID_ARGUMENT;
     return WM_OK;
 }
 

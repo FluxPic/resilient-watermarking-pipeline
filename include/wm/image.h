@@ -1,6 +1,6 @@
 #pragma once
 #include "types.h"
-#include "errors.h"
+#include "api.h"
 
 namespace wm {
 
@@ -10,7 +10,7 @@ struct Image {
     float* Y;   // luminance channel
 };
 
-WM_Error validate_image(const WM_ImageBuffer* img);
+WM_Status validate_image(const WM_ImageBuffer* img);
 Image to_luminance(const WM_ImageBuffer* img);
 void free_image(Image& img);
 
